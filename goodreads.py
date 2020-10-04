@@ -4,6 +4,7 @@
 import requests
 from xml.etree import ElementTree
 
+print("https://www.goodreads.com/book/show/12177850-a-song-of-ice-and-fire")
 class GoodreadsAPIClient:
     def get_book_details(self,url):
         from requests.exceptions import ConnectionError
@@ -34,6 +35,9 @@ class GoodreadsAPIClient:
             dictionary["authors"] = ', '.join(b)
         return dictionary
 
-# url = input("Enter the url: ")
-# obj = GoodreadsAPIClient()
-# print(obj.get_book_details(url))
+url = input("Enter the url: ")
+obj = GoodreadsAPIClient()
+print(obj.get_book_details(url))
+
+
+
